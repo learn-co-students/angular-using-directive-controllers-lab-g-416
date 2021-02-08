@@ -19,6 +19,9 @@ function ContactCard() {
 				'<span class="username">{{ username }}</span>',
 			'</div>'
 		].join(''),
+		controller: function ($scope){
+			$scope.username = $scope.username.toLowerCase()
+		},
 		restrict: 'E'
 	};
 }
@@ -26,3 +29,5 @@ function ContactCard() {
 angular
 	.module('app')
 	.directive('contactCard', ContactCard);
+
+	//.toLowerCase()
